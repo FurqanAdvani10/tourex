@@ -1,0 +1,118 @@
+/* Custom Styles */
+.navbar {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255);
+    z-index: 1000;
+    transition: background-color 0.3s;
+    padding-block: 10px;
+}
+
+.navbar.scrolled {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px); /* Corrected WebKit prefix */
+    box-shadow: 0 0 10px rgba(16, 17, 21, 0.1);
+}
+
+/* Logo Styling */
+.navbar-logo > img {
+    height: 70px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Gap between nav-items */
+}
+/* Navbar Links */
+.navbar-nav .nav-item .nav-link {
+    font-weight: normal;
+    color: #030303 !important;
+    transition: background 0.3s, border-bottom 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    border-bottom: 2px solid goldenrod;
+    padding-bottom: 5px;
+}
+
+/* Navbar Icons Button */
+.navbar-icons .btn-outline-primary {
+    padding: 10px 20px;
+    border: 1px solid var(--btn-bg);
+    border-radius: 10px;
+    background-color: #945d39;
+    /* background: var(--btn-bg); */
+    /* color: rgb(0, 0, 0); */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-icons .btn-outline-primary:hover {
+    background: none;
+    border: 1px solid var(--btn-bg);
+    color: black;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .navbar-logo > img {
+        height: 60px;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-item {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+    .navbar-icons{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .navbar-icons .btn-outline-primary {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+   
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-img-container>img {
+        width: 100%;
+    }
+    .navbar-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .navbar-icons .btn-outline-primary {
+        padding: 10px 5px;
+        border: 1px solid #945d39;
+        border-radius: 0;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        align-items: center;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 10px 10px !important;
+    }
+}

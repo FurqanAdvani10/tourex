@@ -1,0 +1,175 @@
+/* General Styling */
+.program-title {
+  font-size: 2rem; /* Adjusted for smaller screens */
+  font-weight: bold;
+  color: #003366;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.feature-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  transition: transform 0.3s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+  color: #0056b3;
+}
+
+.module-title {
+  font-size: 1.75rem; /* Adjusted for smaller screens */
+  font-weight: bold;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.module-title::after {
+  content: "";
+  width: 60px; /* Adjusted for smaller screens */
+  height: 3px;
+  background: linear-gradient(to right, #0056b3, #00c4ff);
+  display: block;
+  margin: 10px auto 0;
+}
+
+.module-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+.module-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.module-card h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #003366;
+}
+
+.module-card ul li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.img-fluid {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  max-width: 100%;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  background: linear-gradient(145deg, #f0f4f8, #ffffff);
+  border-radius: 12px;
+}
+
+.card-title {
+  margin-bottom: 15px;
+}
+
+.card-text {
+  font-size: 0.95rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .program-title {
+      font-size: 1.5rem; /* Smaller title for mobile */
+  }
+
+  .details-container {
+      padding: 20px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .row {
+      flex-direction: column; /* Stack rows vertically */
+  }
+
+  .col-md-6 {
+      width: 100%; /* Make full-width on mobile */
+      margin-bottom: 20px; /* Add spacing between stacked sections */
+  }
+
+  .module-card {
+      margin-bottom: 20px; /* Add spacing between modules */
+  }
+
+  .module-title {
+      font-size: 1.5rem; /* Adjust module title for smaller screens */
+  }
+
+  .list-unstyled li {
+      font-size: 0.9rem; /* Smaller text for lists */
+  }
+}
+
+@media (max-width: 576px) {
+  .program-title {
+      font-size: 1.25rem; /* Further reduce title size for smaller screens */
+  }
+
+  .module-title {
+      font-size: 1.25rem; /* Adjust module title for extra small screens */
+  }
+
+  .img-fluid {
+      max-width: 100%; /* Ensure image doesn't overflow */
+  }
+
+  .list-unstyled li {
+      font-size: 0.85rem; /* Smaller text for very small screens */
+  }
+}
+
+.label-with-icon{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.label-with-icon > i > svg{
+  font-size: 18px;
+  font-weight: 300;
+}
+.label-with-icon > h5{
+  font-size: 18px;
+  font-weight: 300;
+}
+:where(.css-dev-only-do-not-override-240cud).ant-tabs >.ant-tabs-nav .ant-tabs-nav-wrap, :where(.css-dev-only-do-not-override-240cud).ant-tabs >div>.ant-tabs-nav .ant-tabs-nav-wrap{
+  justify-content: center;
+  padding-block: 11px;
+  /* margin-top: -70px; */
+  /* background-color: #726f6fba; */
+}
+
+.booking-form-main {
+  /* margin-top: 50px; */
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(16, 17, 21, 0.1);
+}
+.mt-10{
+  margin-top: 10px;
+}
+.booking-btn button{
+  width: 100%;
+  padding: 13px;
+  background-color: #945d3a;
+  color: white;
+  border: none;
+}
+.booking-form-heading h3{
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #945d3a;
+
+}

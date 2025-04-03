@@ -1,0 +1,26 @@
+.process-container{
+    min-width: 100%;
+}
+.process-img-box > img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
+    object-fit: cover;
+    max-width: 100%;
+}
+.process-box{
+    background-color: #f6f4fa;
+    padding: 51px 44px 30px 44px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.process-box > .process-heading > h4{
+    font-size: 18px;
+    font-weight: 700;
+}
+.process-box > .process-heading > p{
+    font-size: 16px;
+}

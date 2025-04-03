@@ -1,0 +1,82 @@
+.wrapper-main {
+    width: 100%;
+    height: 420px;
+    /* background-image: linear-gradient(180deg, #171717  0%, #947139 100%) ,url(../../Assets/makkahbackground.jpg); */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/contactbg.jpg) ;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner1.jpg)  !important;
+    width: 100%;
+    height: 420px;
+}
+
+.contact-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner3.jpg)  !important;
+    width: 100%;
+    height: 420px;
+}
+.contact-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner3.jpg)  !important;
+    width: 100%;
+    height: 420px;
+}
+
+/* Courses Heading */
+.wrapper-heading {
+    text-align: center;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    /* z-index: 1; */
+}
+
+.wrapper-heading > h4 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.wrapper-heading > h6 {
+    font-size: 16px;
+    margin-bottom: 20px !important;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.wrapper-heading > h6 > span:hover {
+    transition: all 0.4s;
+    font-weight: 600 !important;
+    color: var(--btn-bg);
+}
+.feature{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.471), rgba(159, 138, 103, 0.564)), url(../../Assets/featurebackground.jpg) !important;
+    background-position: 0px -2px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+.servicebg{
+    background-image:  linear-gradient(to bottom, rgba(0, 0, 0, 0.745), rgba(250, 201, 109, 0.397)),url(../../Assets/servicebg.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media (max-width: 768px) {
+    .wrapper-heading > h6{
+        font-weight: 400;
+        line-height: 15px;
+    }
+    .wrapper-heading > h4 {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 20px !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+  
+  } 

@@ -1,0 +1,30 @@
+.adventure-main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/banner-4.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adventure-heading h5{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px !important;
+    font-family: "Birthstone", cursive;
+}
+.adventure-heading h2 {
+    font-size: 49px;
+    font-weight: 800;
+    color: white;
+}
+.adventure-heading > button {
+    margin-top: 40px;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    color: var(--sub-heading-txt);
+}

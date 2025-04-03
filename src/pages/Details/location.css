@@ -1,0 +1,10 @@
+.location-main{
+    
+}
+.location-heading {
+    margin-bottom: 30px;
+}
+.location-heading > h3 {
+    font-size: 40px;
+    font-weight: 500;
+}

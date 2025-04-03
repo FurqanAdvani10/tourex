@@ -1,0 +1,69 @@
+.destination-main{
+    background-image: url(./../../assets/sec2bg.png);
+    background-size: cover;
+}
+
+.swiper {
+    /* width: 100%; */
+    /* height: 100%; */
+    background: none !important;
+  }
+  
+  .swiper-slide { 
+    text-align: center;
+    font-size: 18px;
+    background: none !important;
+    box-shadow: none;
+    border-radius: 35px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+  
+
+  .sild-container{
+    width: 100%;
+    height: 290px;
+  }
+  
+  .swiper-backface-hidden .swiper-slide{
+    transform : none !important;
+  }
+
+  .item-box{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-position: center;
+    background-size: cover;
+    /* border-radius: 35px; */
+    box-shadow: none !important;
+    background-color: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    /* padding: 20px; */
+  }
+  .item-content{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  .item-content{
+    padding: 20px;
+    text-align: left;
+  }
+  .item-content > h3{
+    font-size: 22px;
+  }
+  .item-content > h5{
+    font-size: 14px;
+  }
