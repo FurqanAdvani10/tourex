@@ -1,0 +1,94 @@
+.information-main {
+    width: 100%;
+    padding: 24px 32px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    animation: fadeSlideIn 0.6s ease;
+}
+
+.information-heading > h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.information-content > p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #444;
+    line-height: 1.7;
+}
+
+.information-items {
+    padding-block: 24px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.item-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+}
+
+.item-with-icon > i > svg {
+    font-size: 24px;
+    color: #945d3a;
+}
+
+.item-with-icon > h5 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.custom-description .ant-descriptions-item-label {
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
+
+.custom-description .ant-descriptions-item-content {
+    font-size: 15px;
+    color: #333;
+}
+
+.information-main, .location-main, .tour {
+    animation: fadeSlideIn 0.6s ease;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive touch */
+@media (max-width: 768px) {
+    .information-items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .information-main {
+        padding: 20px;
+    }
+
+    .information-heading > h4 {
+        font-size: 24px;
+    }
+
+    .item-with-icon > h5 {
+        font-size: 15px;
+    }
+}

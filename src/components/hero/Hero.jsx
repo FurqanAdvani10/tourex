@@ -13,7 +13,7 @@ const Hero = () => {
               </div>
               <div className="hero-img">
                 <img src="https://themedox.com/demo/tourex/assets/img/hero/tu/avatar.png" alt="" />
-                <a href="">35k Peoples Booked <br /> Dream Place</a>
+                <a href="">35k Peoples Booked <br  /> Dream Place</a>
               </div>
               <div className="hero-btn">
                 {/* <input type="text" placeholder='Search' /> */}

@@ -23,11 +23,11 @@
 
 /* STYLES SPECIFIC TO FOOTER  */
 .footer {
-  background: url(../../Assets/footer.jpg) center/cover no-repeat;
+  /* background: url(../../Assets/footer.jpg) center/cover no-repeat; */
   width: 100%;
   position: relative;
   height: auto;
-  background-color: #0e2435;
+  background-color: #080808;
 }
 
 .footer .col {

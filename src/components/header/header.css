@@ -35,10 +35,10 @@
 
 /* Navbar Icons Button */
 .navbar-icons .btn-outline-primary {
-    padding: 10px 20px;
-    border: 1px solid var(--btn-bg);
-    border-radius: 10px;
-    background-color: #945d39;
+    padding: 8px 20px;
+    border: 1px solid black;
+    border-radius: 12px;
+    background-color: #bb9166;
     /* background: var(--btn-bg); */
     /* color: rgb(0, 0, 0); */
     color: white;

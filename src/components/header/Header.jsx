@@ -4,7 +4,7 @@ import './header.css';
 import { useNavigate } from 'react-router-dom';
 // import { useNavigate }  from 'react-router-dom';
 // import logo from '../../Assets/logo.png';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo2.png'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -59,7 +59,7 @@ const navigate = useNavigate()
             </li>
           </ul>
           <div className="navbar-icons">
-            <button className="btn btn-outline-primary">Register</button>
+            <button className="btn btn-outline-primary" onClick={() => navigate('/contact')}>Register</button>
           </div>
         </div>
       </div>

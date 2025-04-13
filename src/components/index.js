@@ -12,6 +12,8 @@ import Banner from "./banner/Banner";
 import WhatWeDo from "./whatWeDo/WhatWeDo";
 import Adventure from "./adventure/Adventure";
 import Packages from "./packages/Packages";
+import Gallery from "./Gallery/Gallery";
+import Explore from "./explore/Explore";
 
 export {
     Header,
@@ -27,5 +29,7 @@ export {
     Banner,
     WhatWeDo,
     Adventure,
-    Packages
+    Packages,
+    Gallery,
+    Explore
 }

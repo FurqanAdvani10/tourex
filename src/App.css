@@ -8,10 +8,10 @@
   padding-block: 70px;
 }
 .heading-with-sub h5 {
-  background: #f5efff;
-  display: inline-block;
-  padding: 8px 15px !important;
-  color: #560ce3;
+  /* background: #f5efff; */
+  display: inline-block; 
+  /* padding: 8px 15px !important; */
+  color: #945d39;
   font-weight: 500;
   font-size: 16px;
   text-transform: capitalize;
@@ -41,7 +41,9 @@
 }
 :root {
   --sub-heading-bg: #f5efff;
-  --sub-heading-txt: #560ce3;
-  --btn-bg: #560ce3;
+  --sub-heading-txt: white;
+  --btn-bg: #bb9166;
   --them-sec: #f5efff;
+  --them-prim :#bb9166;
+  
 }

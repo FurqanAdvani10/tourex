@@ -162,7 +162,7 @@
 .booking-btn button{
   width: 100%;
   padding: 13px;
-  background-color: #945d3a;
+  background-color: var(--them-prim);
   color: white;
   border: none;
 }

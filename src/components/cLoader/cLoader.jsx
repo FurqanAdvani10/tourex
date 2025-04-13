@@ -8,7 +8,7 @@ const CLoader = () => {
   return (
     <div className="loading-spinner">
       {/* You can also use a spinner here */}
-      <HashLoader color='#560ce3'/>
+      <HashLoader color='#bb9166'/>
       {/* <Spin indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />} /> */}
     </div>
   )

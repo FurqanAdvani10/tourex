@@ -48,7 +48,9 @@ const Destinations = () => {
               {data.map(item => {
                 return (
                   <SwiperSlide key={item.id}>
-                    <div className="sild-container">
+                    <div className="sild-container" 
+                      onClick={() => navigate('/packages')}
+                    >
                       <div className="item-box"
                         style={{ backgroundImage: `url(${images[`../../assets/${item?.image}`]?.default})`, objectFit: "contain" }}
                       >

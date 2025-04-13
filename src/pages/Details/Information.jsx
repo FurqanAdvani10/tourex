@@ -1,36 +1,86 @@
 
 import React from 'react'
+import './information.css'
+import { Descriptions, Divider } from 'antd'
+import { CiTimer } from 'react-icons/ci'
+import { RiGuideLine, RiHotelLine } from 'react-icons/ri'
 
 const Information = ({ data }) => {
-    console.log(data)
+
+    const items = [
+        {
+            key: '1',
+            label: 'Destination',
+            children: <p>{data?.destination}</p>,
+        },
+        {
+            key: '2',
+            label: 'Departure',
+            children: <p>{data?.departure}</p>,
+        },
+        {
+            key: '2',
+            label: 'Ticket',
+            children: <p>{data?.tickets}</p>,
+        },
+        {
+            key: '2',
+            label: 'Food Included',
+            children: <p>{data?.food_included}</p>,
+        },
+        {
+            key: '3',
+            label: 'Sharing Price',
+            children: <p>{data?.sharing_price}</p>,
+        },
+        {
+            key: '4',
+            label: 'Triple Bed Price',
+            children: <p>{`${data?.triple_bed_price} / per person`}</p>,
+        },
+        {
+            key: '5',
+            label: 'Double Bed',
+            children: <p>{data?.double_bed_price}</p>,
+        },
+        {
+            key: '6',
+            label: 'Payment Schedule',
+            children: <p>{data?.payment_schedule}</p>,
+        },
+    ];
+
+
     return (
-        <div>
-            {data.modules && (
-                <div className="row mt-5">
-                    <h3 className="mb-4 module-title">Modules</h3>
-                    {data.modules.map((module, index) => (
-                        <div className="col-md-4 mb-4" key={index}>
-                            <div className="card module-card border-0 shadow-sm h-100">
-                                <div className="card-body">
-                                    <h5 className="card-title text-primary">{module.name}</h5>
-                                    <p className="card-text">
-                                        <strong>Duration:</strong> {module.duration}
-                                    </p>
-                                    <p className="card-text text-muted">{module.description}</p>
-                                    <ul className="list-unstyled mt-3">
-                                        {module.topics.map((topic, i) => (
-                                            <li key={i} className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-arrow-right-circle-fill text-info me-2"></i>
-                                                <span>{topic}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+        <div className='information-main'>
+
+            <div className="information-heading">
+                <h4 className='p-0 m-0'>{data?.name}</h4>
+                <Divider />
+            </div>
+            <div className="information-content">
+                <p>{data?.description}</p>
+                <div className="information-items">
+                    <div className="item-with-icon">
+                        <i><CiTimer /></i>
+                        <h5 className='p-0 m-0'>{data?.days} Days</h5>
+                    </div>
+                    <div className="item-with-icon">
+                        <i><RiHotelLine /></i>
+                        <h5 className='p-0 m-0'>Hotels</h5>
+                    </div>
+                    <div className="item-with-icon">
+                        <i><RiGuideLine /></i>
+                        <h5 className='p-0 m-0'>Tour Guide</h5>
+                    </div>
                 </div>
-            )}
+            </div>
+            <Divider />
+            <Descriptions
+                items={items}
+                column={1}
+                className='custom-description'
+            />
         </div>
     )
 }

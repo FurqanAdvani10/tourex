@@ -1,0 +1,69 @@
+.explore-content > button{
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    background-color: var(--btn-bg);
+    color: aliceblue;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.explore-img-container{
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/shape-2.png);
+    background-position: center;
+    background-size:cover;
+}
+.thumb-2-container , .thumb-1-container{
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+}
+.thumb-1-container{
+    margin-bottom: 20px;
+}
+.thumb-2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumb-1, .thumb-3, .thumb-4 {
+    width: 100%;
+  }
+.thumb-1 img , .thumb-3  img, .thumb-4 img{
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.circle img{
+    width: 150px;
+    object-fit: contain;
+    animation: mymove 7s infinite;
+}
+
+@keyframes mymove {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  @media (min-width: 768px) and (max-width: 991px) {
+
+  }
+
+  @media (max-width: 768px) {
+    .thumb-1 img , .thumb-3  img, .thumb-4 img{
+        width: 100%;
+        object-fit: contain;
+        border-radius: 20px;
+        display: flex;
+        gap: 10px !important;
+    }
+    .circle img{
+    width: 100px;
+    object-fit: contain;
+    animation: mymove 7s infinite;
+}
+  }

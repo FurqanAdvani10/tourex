@@ -26,5 +26,31 @@
     font-size: 15px;
     font-weight: 600;
     border: none;
-    color: var(--sub-heading-txt);
+    color: var(--them-prim);
+    border-radius: 12px;
+}
+
+
+@media (max-width: 768px) {
+    .adventure-heading h5{
+        font-size: 22px;
+    }
+    .adventure-heading > button {
+        margin-top: 40px;
+        padding: 12px 20px;
+    }   
+    .adventure-heading h2 {
+        font-size: 29px;
+        font-weight: 800;
+        color: white;
+    }
+    .adventure-heading > button {
+        margin-top: 30px;
+        padding: 15px 20px;
+        font-size: 12px;
+        font-weight: 600;
+        border: none;
+        color: var(--them-prim);
+        border-radius: 12px;
+    }
 }

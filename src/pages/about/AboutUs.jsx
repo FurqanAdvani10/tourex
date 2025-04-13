@@ -1,5 +1,5 @@
 import React from 'react'
-import { Adventure, PageWrapper, WhatWeDo } from '../../components'
+import { Adventure, Explore, Gallery, PageWrapper, WhatWeDo } from '../../components'
 
 const AboutUs = () => {
   return (
@@ -11,7 +11,9 @@ const AboutUs = () => {
         navigatePath={'/'}
         subtitle={"About"}
       />
+      <Explore />
       <WhatWeDo />
+      <Gallery />
       <Adventure />
       
     </div>

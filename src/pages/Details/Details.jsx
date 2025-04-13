@@ -9,12 +9,14 @@ import { IoLocationOutline } from 'react-icons/io5';
 import { FaRegCalendarAlt } from 'react-icons/fa';
 import Information from './Information';
 import Location from './Location';
+import Plane from './Plane';
 
 function Details() {
 
     const [activeTab, setActiveTab] = useState("1");
 
     const { id } = useParams();
+    console.log(id)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -28,17 +30,20 @@ function Details() {
         return images[`../../assets/${path}`]?.default || "";
     };
 
-    const Item = data.find(item => item.id === parseInt(id));
+    const Item = data?.find(item => item.id === parseInt(id));
 
+    console.log(data.packages)
+    const map = data?.categories?.filter(item => item.id === id)
 
+    console.log(data?.categories)
     const onChange = (key) => {
         setActiveTab(key);
     };
 
     const tabsContent = {
-        "1": <Information  data={Item}/>,
-        "2": <Location  data={Item.location}/>,
-        "3": <Location  data={Item}/>,
+        "1": <Information data={Item} />,
+        "2": <Plane data={Item} />,
+        "3": <Location data={Item?.location} />,
     };
 
     const items = [
@@ -50,7 +55,6 @@ function Details() {
                     <h5 className='p-0 m-0'>Information</h5>
                 </div>
             ),
-            // children: tabs("1"),
         },
         {
             key: "2",
@@ -60,7 +64,6 @@ function Details() {
                     <h5 className='p-0 m-0'>Tour Plan</h5>
                 </div>
             ),
-            // children: tabs("2"),
         },
         {
             key: "3",
@@ -70,7 +73,6 @@ function Details() {
                     <h5 className='p-0 m-0'>Location</h5>
                 </div>
             ),
-            // children: tabs("3"),
         },
     ];
 
@@ -81,11 +83,17 @@ function Details() {
             {/* Page Wrapper Component */}
             <PageWrapper
                 title={Item.name}
-                moveTo="Hajj Packages"
+                moveTo="packages"
                 subtitle="Details"
-                navigatePath="/hajj"
+                navigatePath="home"
             />
-            <Tabs defaultActiveKey="1" items={items} onChange={onChange} tabPane={false} />
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-12">
+                        <Tabs defaul/*  */ tActiveKey="1" items={items} onChange={onChange} tabPane={false} />
+                    </div>
+                </div>
+            </div>
 
 
 
@@ -94,70 +102,15 @@ function Details() {
             <div className="details-container section-padding">
                 <div className='container'>
 
-                    <div className="row align-items-center">
-                        {/* Image Section */}
-                        {/* <div className="col-md-6 mb-4"> */}
+                    <div className="row align-items-start">
 
-                        {/* <img src={getImg(program?.image)} alt={program.name} className="img-fluid rounded shadow-lg border border-primary" /> */}
-                        {/* <img
-                                src={require(`../../Assets/${program.package}`)}
-                                alt={program.name}
-                                className="img-fluid rounded shadow-lg border border-primary"
-                            /> */}
-                        {/* </div> */}
-
-                        {/* <div className="col-md-6">
-                            <h2 className="mb-3 program-title">{program.name}</h2>
-                            <p className="text-muted">{program.description}</p>
-
-                            <h4 className="mt-4 mb-3 text-secondary">Package Details:</h4>
-                            <ul className="list-unstyled">
-                                <li><strong>Days:</strong> {program.days}</li>
-                                <li><strong>Maktab:</strong> {program.maktab}</li>
-                                <li><strong>Airline:</strong> {program.airline}</li>
-                                <li><strong>Sharing Price:</strong> {program.sharing_price}</li>
-                                <li><strong>Triple Bed Price:</strong> {program.triple_bed_price}</li>
-                                <li><strong>Double Bed Price:</strong> {program.double_bed_price}</li>
-                                <li><strong>Payment Schedule:</strong> {program.payment_schedule}</li>
-                                <li><strong>Food Included:</strong> {program.food_included}</li>
-                            </ul>
-
-                            {program.features?.length > 0 && (
-                                <>
-                                    <h4 className="mt-4 text-secondary">Features:</h4>
-                                    <ul className="list-unstyled feature-list">
-                                        {program.features.map((feature, index) => (
-                                            <li key={index} className="mb-3 d-flex align-items-start">
-                                                <i className="bi bi-check-circle-fill text-success me-2"></i>
-                                                <span className="text-dark">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </>
-                            )}
-
-                            {program.note?.length > 0 && (
-                                <>
-                                    <h4 className="mt-4 text-secondary">Important Notes:</h4>
-                                    <ul className="list-unstyled note-list">
-                                        {program.note.map((note, index) => (
-                                            <li key={index} className="mb-2 d-flex align-items-start">
-                                                <i className="bi bi-info-circle-fill text-warning me-2"></i>
-                                                <span>{note}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </>
-                            )}
-                        </div> */}
-
-                        <div className="col-md-9">
+                        <div className="col-md-9 col-sm-12 col-12">
                             {tabsContent[activeTab]}
                         </div>
 
 
 
-                        <div className="col-md-3">
+                        <div className="col-md-3 col-sm-12 col-12">
                             <div className="booking-form-main">
                                 <div className="booking-form-heading">
                                     <h3>Book This Tour</h3>

@@ -15,7 +15,7 @@ const WhatWeDo = () => {
                             <h2 className="p-0 m-0">We Arrange the Best Tour Ever Possible</h2>
                             <p className='m-0 p-0'> when an unknown printer took a galley of type and scrambled make type specimen bookhas survived not only five.</p>
                         </div>
-                        <div className="row g-4 mt-30 d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-3">
+                        <div className="row g-4 mt-30 d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-1 row-cols-lg-2 row-cols-xl-3">
                             <div className="col">
                                 <div className="box-container">
                                     <div className="box-icon">

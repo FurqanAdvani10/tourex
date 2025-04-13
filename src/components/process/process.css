@@ -9,7 +9,8 @@
     max-width: 100%;
 }
 .process-box{
-    background-color: #f6f4fa;
+    box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.15);
+    /* background-color: #f6f4fa; */
     padding: 51px 44px 30px 44px;
     border-radius: 20px;
     text-align: center;
@@ -23,4 +24,8 @@
 }
 .process-box > .process-heading > p{
     font-size: 16px;
+}
+.process-icon > svg {
+    /* background-color: var(--them-prim)  ; */
+    color: var(--them-prim);
 }
