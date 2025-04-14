@@ -1,7 +1,6 @@
 .wrapper-main {
     width: 100%;
     height: 420px;
-    /* background-image: linear-gradient(180deg, #171717  0%, #947139 100%) ,url(../../Assets/makkahbackground.jpg); */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/contactbg.jpg) ;
     background-position: center;
     background-size: cover;
@@ -12,18 +11,29 @@
 }
 
 .about-banner{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner1.jpg)  !important;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner2.jpg)  !important;
     width: 100%;
     height: 420px;
 }
 
 .contact-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner4.jpg)  !important;
+    width: 100%;
+    height: 420px;
+}
+
+.packages-banner{
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner3.jpg)  !important;
     width: 100%;
     height: 420px;
 }
-.contact-banner{
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner3.jpg)  !important;
+.faqs-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/banner5.jpg)  !important;
+    width: 100%;
+    height: 420px;
+}
+.team-banner{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)) ,url(../../assets/bannersection.jpg)  !important;
     width: 100%;
     height: 420px;
 }

@@ -75,6 +75,7 @@
     background-color: var(--btn-bg) !important;
     border: none;
     color: aliceblue;
+    transition: all 0.3s ease;
   }
   
   .contact-btn {
@@ -84,7 +85,8 @@
   }
   
   .contact-btn>button:hover {
-    background: var(--sub-heading-bg) !important;
+    background-color: #fff !important;
+    /* background: var(--sub-heading-bg) !important; */
     transition: 0.3s ease all;
     border: 1px solid var(--btn-bg);
     color: var(--btn-bg);

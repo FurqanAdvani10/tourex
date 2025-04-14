@@ -4,7 +4,7 @@ export const data = [
   {
 
     id: 1,
-    image: "banner2.jpg",
+    image: "Swat.webp",
     package: 'day17.JPG',
     name: "Sawaat Tour",
     departure: "Islamabad, Pakistan",

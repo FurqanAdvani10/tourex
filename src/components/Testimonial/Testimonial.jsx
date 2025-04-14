@@ -8,31 +8,32 @@ import './testimonial.css';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 const Testimonials = () => {
+ 
   const testimonialData = [
     {
-      avatar: "https://img.freepik.com/free-photo/woman-with-long-hair-yellow-hoodie-with-word-music-it_1340-39068.jpg",
-      name: "Simonette Lindermann",
-      review: "Mind-blowing discovery! Changed my routine. Essential for everyone. Can't imagine without it!",
+      avatar: "https://static.vecteezy.com/system/resources/previews/024/183/525/non_2x/avatar-of-a-man-portrait-of-a-young-guy-illustration-of-male-character-in-modern-color-style-vector.jpg", // Male avatar
+      name: "Ali Raza",
+      review: "TravelNMemories made our Swat trip unforgettable! Everything was well-organized and hassle-free. Highly recommended!",
     },
     {
-      avatar: "https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg",
-      name: "Merilee Beal",
-      review: "Unbelievable gem! Altered my life. A must-have now. Wholeheartedly advise it to everyone.",
+      avatar: "https://t3.ftcdn.net/jpg/06/17/13/26/360_F_617132669_YptvM7fIuczaUbYYpMe3VTLimwZwzlWf.jpg", // Female avatar
+      name: "Ayesha Khan",
+      review: "Had a fantastic experience in Murree with TravelNMemories! Everything from transport to accommodation was top-notch.",
     },
     {
-      avatar: "https://img.freepik.com/free-photo/handsome-african-guy-with-stylish-haircut-taking-photo-digital-camera_171337-1345.jpg",
-      name: "Suzi Lankester",
-      review: "Phenomenal addition! Completely transformed my days. Strongly endorse for all. A game-changer!",
+      avatar: "https://static.vecteezy.com/system/resources/previews/024/183/525/non_2x/avatar-of-a-man-portrait-of-a-young-guy-illustration-of-male-character-in-modern-color-style-vector.jpg", // Male avatar
+      name: "Hamza Yousuf",
+      review: "Went on a family tour to Hunza. TravelNMemories handled everything professionally. It was safe, smooth, and scenic!",
     },
     {
-      avatar: "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg",
-      name: "Gaston Cunnow",
-      review: "Amazing product! It changed my life. Highly recommended to everyone!",
+      avatar: "https://t3.ftcdn.net/jpg/06/17/13/26/360_F_617132669_YptvM7fIuczaUbYYpMe3VTLimwZwzlWf.jpg", // Female avatar
+      name: "Fatima Zahra",
+      review: "This was my first solo trip, and I felt so comfortable and secure with TravelNMemories. Everything was perfectly arranged!",
     },
     {
-      avatar: "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
-      name: "Marys Lobb",
-      review: "Life-altering find! Indispensable now. Enthusiastically suggest to all.",
+      avatar: "https://static.vecteezy.com/system/resources/previews/024/183/525/non_2x/avatar-of-a-man-portrait-of-a-young-guy-illustration-of-male-character-in-modern-color-style-vector.jpg", // Male avatar
+      name: "Usman Tariq",
+      review: "From Lahore to Skardu, every moment was amazing. Clean transport, friendly staff, and breathtaking views. Loved it!",
     },
   ];
 

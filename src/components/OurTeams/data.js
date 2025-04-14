@@ -50,8 +50,7 @@
 export const data = [
   { id: 2, src: "founder.jpg", name: "Abdul Ghaffar", designation: "Director" },
   { id: 1, src: "ceo.jpg", name: "Kabeer Ghaffar", designation: "Director / CEO" },
-  { id: 3, src: "fo.jpg", name: "Danish", designation: "CEO" },
-  { id: 3, src: "fo.jpg", name: "Shaihzad", designation: "CFO" },
+  { id: 3, src: "fo.jpg", name: "Danish", designation: "Operation Manager" },
   { id: 4, src: "cto.jpg", name: "Furqan Advani", designation: "CTO" },
   { id: 4, src: "designer.jpg", name: "Humayion", designation: "Marketing Head" },
   { id: 4, src: "to.jpg", name: "Danish", designation: "Tour Operator" },

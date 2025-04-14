@@ -39,6 +39,9 @@
 .text-center{
   text-align: center;
 }
+.mb-40{
+  margin-bottom: 40px;
+}
 :root {
   --sub-heading-bg: #f5efff;
   --sub-heading-txt: white;

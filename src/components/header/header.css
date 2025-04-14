@@ -29,18 +29,16 @@
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    border-bottom: 2px solid goldenrod;
+    border-bottom: 2px solid var(--them-prim);
     padding-bottom: 5px;
 }
 
 /* Navbar Icons Button */
 .navbar-icons .btn-outline-primary {
     padding: 8px 20px;
-    border: 1px solid black;
+    border: none;
     border-radius: 12px;
     background-color: #bb9166;
-    /* background: var(--btn-bg); */
-    /* color: rgb(0, 0, 0); */
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
@@ -70,7 +68,7 @@
     }
 
     .nav-link {
-        font-size: 13px;
+        font-size: 14px;
         text-align: center;
         color: #fff;
     }

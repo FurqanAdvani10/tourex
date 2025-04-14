@@ -7,9 +7,9 @@ import { HashLoader } from 'react-spinners';
 const CLoader = () => {
   return (
     <div className="loading-spinner">
-      {/* You can also use a spinner here */}
-      <HashLoader color='#bb9166'/>
-      {/* <Spin indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />} /> */}
+      <div className="loader-main-container">
+        <HashLoader color='#bb9166' />
+      </div>
     </div>
   )
 }

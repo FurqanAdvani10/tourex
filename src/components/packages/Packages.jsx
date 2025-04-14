@@ -4,7 +4,7 @@ import './packages.css'
 import { FaRegStar } from 'react-icons/fa6'
 import { Divider } from 'antd'
 
-const Packages = () => {
+const Packages = ({ forHero }) => {
 
 
     const images = import.meta.glob('../../assets/**/*', { eager: true });
@@ -32,8 +32,18 @@ const Packages = () => {
         <>
             <div className='courses-card-container section-padding'>
                 <div className='container'>
+                    {forHero ? (
+                        <div className="row">
+                            <div className="col-md-12">
+                                <div className="heading-with-sub text-center mb-40">
+                                    <h5 className='m-0 p-0'>Explore The Pakistan</h5>
+                                    <h2 className='m-0 p-0'>Our Amazing Featured Tour Package</h2>
+                                </div>
+                            </div>
+                        </div>
+                    ) : null}
                     <div className='row g-4 justify-content-center row-cols-xl-3 row-cols-md-2 row-cols-1'>
-                        {data.map((program, index) => (
+                        {(forHero ? data?.slice(0, 3) : data)?.map((program, index) => (
                             <div className='col' key={index}>
                                 <div className='course-card' onClick={() => navigate(`/details/${program?.id}`)}>
                                     <div className='course-card-body'>
@@ -42,11 +52,6 @@ const Packages = () => {
                                             <img src={getImg(program?.image)} alt={program.name} className="img-fluid" />
                                         </div>
                                         <div className='course-content'>
-                                            {/* <div class="course-reiew">
-                                                <div className='ratting-count'>
-                                                    <h6 className='p-0 m-0'> 03 reviews</h6>
-                                                </div>
-                                            </div> */}
                                             <div className='course-card-title'>
                                                 <h3 className='m-0 p-0'>{program.name}</h3>
                                                 <p className='m-0 p-0'>{truncateText(program.description)}</p>

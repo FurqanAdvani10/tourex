@@ -9,7 +9,7 @@ const PackagePage = () => {
         moveTo={"Home"}
         navigatePath={'/'}
         subtitle={"Packages"}
-        className={'contact-banner'}
+        className={'packages-banner'}
       />
       <Packages />
       <Testimonials />
