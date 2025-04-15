@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { FaEnvelope, FaGlobe, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import './contactUsMap.css'
 import { useFormik } from 'formik';
+import { contactForm } from './validation';
 
 const ContactUsMap = () => {
 
@@ -11,10 +12,10 @@ const ContactUsMap = () => {
     }, []);
 
     const infoCards = [
-        { title: "Head Office", address: "Office #103 Iconic Trade Center Bahadurabad, Karachi ", icon: <FaMapMarkerAlt /> },
-        { title: "Phone Number", address: "+9221 34857005, 34856651, 333 2184494 ,322 2184494", icon: <FaPhoneAlt /> },
-        { title: "Send Email", address: "info@rfqtravel.com", icon: <FaEnvelope /> },
-        { title: "Our Website", address: "www.rfqtravel.com", icon: <FaGlobe /> },
+        { title: "Head Office", address: "Central Plaza Opp Gul Plaza Marston Road Saddar karachi ", icon: <FaMapMarkerAlt /> },
+        { title: "Phone Number", address: "+92 332 9773747", icon: <FaPhoneAlt /> },
+        { title: "Send Email", address: "info@travelnmemories.com", icon: <FaEnvelope /> },
+        { title: "Our Website", address: "www.travelnmemories.com", icon: <FaGlobe /> },
     ];
 
     const initialValues = {
@@ -25,25 +26,41 @@ const ContactUsMap = () => {
         phone: ""
     };
 
+
+    const sendEmail = async (formDataToSend) => {
+
+
+        const response = await fetch("https://travelnmemories.com/send-email.php", {
+            method: "POST",
+            body: formDataToSend,
+        });
+
+        const result = await response.text();
+        result === "" ? action.resetForm() : 'error'
+        // window.location.href = mailtoLink;
+
+    };
+
     const { values, errors, touched, handleChange, handleSubmit, setFieldTouched } = useFormik({
         initialValues: initialValues,
-        // validationSchema: contactForm,
-        country: '',
+        validationSchema: contactForm,
         onSubmit: (values, action) => {
+         
+            const formDataToSend = new FormData();
+            formDataToSend.append("name", values.name);
+            formDataToSend.append("email", values.email);
+            formDataToSend.append("phone", values.phone);
+            formDataToSend.append("service", values.service);
+            formDataToSend.append("message", values.message);
 
-            const emailBody = `
-              Name: ${values.name} ${values.lastname}
-              Email: ${values.email}
-              Country: ${values.country}
-              phone: ${values.phone}
-              Message: ${values.message}
-      `;
 
-            const mailtoLink = `mailto:info@slcedu.com?subject=Inquiry&body=${encodeURIComponent(emailBody)}`;
+            console.log(formDataToSend ,"formDataToSend ")
 
-            window.location.href = mailtoLink;
+            sendEmail(formDataToSend)
+            // const mailtoLink = `mailto:info@slcedu.com?subject=Inquiry&body=${encodeURIComponent(emailBody)}`;
 
-            action.resetForm()
+
+            // action.resetForm()
         },
     });
 
@@ -66,7 +83,6 @@ const ContactUsMap = () => {
                             <div className="col-md-12 col-sm-12 col-xl-8 col-lg-8">
                                 <div class="col-md-12">
                                     <div class="row">
-
                                         <div class="fst-lst col-md-6 col-12">
                                             <input type="name"
                                                 name='name'
@@ -102,7 +118,7 @@ const ContactUsMap = () => {
                                 </div>
 
                                 <div class="col-md-12">
-                                    <div class="row mt-30">
+                                    <div class="row mt-30-inp">
                                         <div class="fst-lst col-md-6 col-12">
                                             <input
                                                 value={values.phone}
@@ -125,10 +141,10 @@ const ContactUsMap = () => {
                                                 onChange={handleChange}
                                                 onBlur={() => setFieldTouched('service', true, true)}
                                                 aria-label="Default select example">
-                                                <option selected>Discord</option>
-                                                <option value="Hajj">Hajj</option>
-                                                <option value="Umrah">Umrah</option>
-                                                <option value="Ziarat">Ziarat</option>
+                                                <option selected>Services</option>
+                                                <option value="Tour">Tour</option>
+                                                <option value="Hotel Booking">Hotel Booking</option>
+                                                <option value="Car">Car</option>
                                             </select>
                                             {errors.service && touched.service ? (
                                                 <p className='p_msg p-0 m-0'>
@@ -140,7 +156,7 @@ const ContactUsMap = () => {
                                 </div>
 
 
-                                <div class="text-section mt-30">
+                                <div class="text-section mt-30-inp">
                                     <textarea class="form-control"
                                         name='message'
                                         value={values.message}
@@ -185,7 +201,7 @@ const ContactUsMap = () => {
                                         style={{
                                             border: "0",
                                             width: "100%", // Make the width responsive
-                                            height: "410px", // Fixed height
+                                            height: "390px", // Fixed height
                                         }}
                                         allowfullscreen=""
                                         loading="lazy"

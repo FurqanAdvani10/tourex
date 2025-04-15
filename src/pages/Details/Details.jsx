@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import './details.css';
 import { CLoader, PageWrapper, Testimonials } from '../../components';
 import { data } from '../../components/packages/data';
-import { Tabs } from 'antd';
+import { Button, Tabs } from 'antd';
 import { MdOutlinePermDeviceInformation } from 'react-icons/md';
 import { IoLocationOutline } from 'react-icons/io5';
 import { FaRegCalendarAlt } from 'react-icons/fa';
@@ -13,29 +13,55 @@ import Plane from './Plane';
 
 function Details() {
 
+    const [loading, setLoading] = useState(false);
     const [activeTab, setActiveTab] = useState("1");
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
 
     const { id } = useParams();
-    console.log(id)
-    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, []);
 
-    const images = import.meta.glob('../../assets/**/*', { eager: true });
-
-    const getImg = (path) => {
-        if (!path) return ""; // Prevent errors for undefined/null paths
-        return images[`../../assets/${path}`]?.default || "";
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const Item = data?.find(item => item.id === parseInt(id));
 
-    console.log(data.packages)
-    const map = data?.categories?.filter(item => item.id === id)
+    const sendWhatsAppMessage = (e) => {
+        e.preventDefault();
+        setLoading(true);
 
-    console.log(data?.categories)
+        const { name, email, phone, message } = formData;
+
+        const textMessage = `New Enquiry From Website:
+    package Detail : ${Item?.name}
+    Name: ${name}
+    Email: ${email}
+    Phone: ${phone}
+    Message: ${message}`;
+
+        const whatsappNumber = "+923329773747"; 
+
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(textMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+
+        setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+        });
+        setLoading(false);
+    };
+
     const onChange = (key) => {
         setActiveTab(key);
     };
@@ -85,7 +111,7 @@ function Details() {
                 title={Item.name}
                 moveTo="packages"
                 subtitle="Details"
-                navigatePath="home"
+                navigatePath={"/packages"}
             />
             <div className="container-fluid">
                 <div className="row">
@@ -108,73 +134,72 @@ function Details() {
                             {tabsContent[activeTab]}
                         </div>
 
-
-
                         <div className="col-md-3 col-sm-12 col-12">
                             <div className="booking-form-main">
                                 <div className="booking-form-heading">
                                     <h3>Book This Tour</h3>
                                 </div>
+                                <form
+                                    onSubmit={sendWhatsAppMessage}
+                                >
+                                    <div className="booking-form">
+                                        <div class="fst-lst col-12 mt-20">
 
-                                <div className="booking-form">
-                                    <div class="fst-lst col-12 mt-20">
+                                            <input
+                                                name='name'
+                                                type="text"
+                                                class="form-control"
+                                                value={formData?.name}
+                                                onChange={handleChange}
+                                                required
+                                                id="exampleFormControlInput1"
+                                                placeholder="Name *" />
+                                        </div>
+                                        <div class="fst-lst col-12 mt-20">
 
-                                        <input
-                                            // onChange={handleChange}
-                                            // value={values.phone}
-                                            // onBlur={() => setFieldTouched('phone', true, true)}
-                                            name='Name'
-                                            type="text"
-                                            class="form-control"
-                                            id="exampleFormControlInput1"
-                                            placeholder="Name *" />
+                                            <input
+                                                name='email'
+                                                type="email"
+                                                class="form-control"
+                                                id="exampleFormControlInput1"
+                                                value={formData?.email}
+                                                onChange={handleChange}
+                                                required
+                                                placeholder="Email *" />
+                                        </div>
+
+                                        <div class="fst-lst col-12 mt-20">
+
+                                            <input
+                                                name='phone'
+                                                type="phone"
+                                                class="form-control"
+                                                value={formData?.phone}
+                                                onChange={handleChange}
+                                                required
+                                                id="exampleFormControlInput1"
+                                                placeholder="Phone Number *" />
+                                        </div>
+
+                                        <div class="text-section mt-30">
+                                            <textarea class="form-control"
+                                                name='message'
+                                                placeholder="Your Message"
+                                                id="exampleFormControlTextarea1"
+                                                value={formData?.message}
+                                                onChange={handleChange}
+                                                required
+                                                rows="3"></textarea>
+
+                                        </div>
+                                        <div className="booking-btn mt-20">
+                                            <Button htmlType="submit" loading={loading} disabled={loading}>
+                                                {loading ? "Sending..." : "Book now"}
+                                            </Button>
+                                        </div>
+
                                     </div>
-                                    <div class="fst-lst col-12 mt-20">
-
-                                        <input
-                                            // onChange={handleChange}
-                                            // value={values.phone}
-                                            // onBlur={() => setFieldTouched('phone', true, true)}
-                                            name='email'
-                                            type="email"
-                                            class="form-control"
-                                            id="exampleFormControlInput1"
-                                            placeholder="Email *" />
-                                    </div>
-
-                                    <div class="fst-lst col-12 mt-20">
-
-                                        <input
-                                            // onChange={handleChange}
-                                            // value={values.phone}
-                                            // onBlur={() => setFieldTouched('phone', true, true)}
-                                            name='phone'
-                                            type="phone"
-                                            class="form-control"
-                                            id="exampleFormControlInput1"
-                                            placeholder="Phone Number *" />
-                                    </div>
-
-                                    <div class="text-section mt-30">
-                                        <textarea class="form-control"
-                                            name='message'
-                                            // value={values.message}
-                                            // onChange={handleChange}
-                                            // onBlur={() => setFieldTouched('message', true, true)}
-                                            placeholder="Your Message"
-                                            id="exampleFormControlTextarea1" rows="3"></textarea>
-                                        {/* {errors.message && touched.message ? (
-                                        <p className='p_msg msg p-0 m-0'>
-                                            {errors.message}
-                                        </p>
-                                    ) : null} */}
-
-                                    </div>
-                                    <div className="booking-btn mt-20">
-                                        <button>BOOK NOW</button>
-                                    </div>
-
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>

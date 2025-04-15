@@ -2,13 +2,14 @@ import React from 'react'
 import './location.css'
 
 const Location = ({ data }) => {
+
     return (
         <div className='location-main'>
             <div className="location-heading">
                 <h3>Location</h3>
             </div>
             <iframe
-                src="https://www.google.com/maps/embed?pb=..."
+                src={data?.location || "https://www.google.com/maps/embed?pb=..."}
                 style={{
                     border: "0",
                     width: "100%",

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { data } from './data'
 import './packages.css'
 import { FaRegStar } from 'react-icons/fa6'
-import { Divider } from 'antd'
+import { Button, Divider } from 'antd'
 
 const Packages = ({ forHero }) => {
 
@@ -48,7 +48,7 @@ const Packages = ({ forHero }) => {
                                 <div className='course-card' onClick={() => navigate(`/details/${program?.id}`)}>
                                     <div className='course-card-body'>
                                         <div className='course-card-img'>
-                                            <span class="badge">New</span>
+                                            {/* <span class="badge">New</span> */}
                                             <img src={getImg(program?.image)} alt={program.name} className="img-fluid" />
                                         </div>
                                         <div className='course-content'>
@@ -58,7 +58,7 @@ const Packages = ({ forHero }) => {
 
                                             </div>
                                             <div className='card-price'>
-                                                <h4 className='p-0 m-0'>{program?.sharing_price}</h4>
+                                                <h4 className='p-0 m-0'>{program?.Group_tour}</h4>
                                             </div>
                                             <div class="course-footer">
                                                 <div class="course-btn">
@@ -71,6 +71,15 @@ const Packages = ({ forHero }) => {
                             </div>
                         ))}
                     </div>
+                    {forHero ? (
+                    <div className="row mt-30">
+                        <div className="col-12 col-md-12 col-sm-12">
+                            <div className="package-btn text-center">
+                                <Button onClick={() => navigate('/packages')}>View More</Button>
+                            </div>
+                        </div>
+                    </div>
+                    ) : null}
                 </div>
             </div>
         </>

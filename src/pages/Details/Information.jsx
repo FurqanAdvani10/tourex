@@ -8,6 +8,11 @@ import { RiGuideLine, RiHotelLine } from 'react-icons/ri'
 const Information = ({ data }) => {
 
     const items = [
+        ...(data?.Inclusive?.length ? [{
+            key: '3',
+            label: 'Inclusive',
+            children: <p>{data?.Inclusive}</p>,
+        }] : []),
         {
             key: '1',
             label: 'Destination',
@@ -28,20 +33,25 @@ const Information = ({ data }) => {
             label: 'Food Included',
             children: <p>{data?.food_included}</p>,
         },
-        {
+        ...(data?.jeep?.length ? [{
             key: '3',
-            label: 'Sharing Price',
-            children: <p>{data?.sharing_price}</p>,
-        },
-        {
+            label: 'Jeep',
+            children: <p>{data?.jeep}</p>,
+        }] : []),
+        ...(data?.Group_tour?.length ? [{
+            key: '3',
+            label: 'Group / Per Head ',
+            children: <p>{data?.Group_tour}</p>,
+        }] : []),
+        ...(data?.couple?.length ? [{
             key: '4',
-            label: 'Triple Bed Price',
-            children: <p>{`${data?.triple_bed_price} / per person`}</p>,
-        },
+            label: 'Couple',
+            children: <p>{data?.couple}</p>,
+        }] : []),
         {
             key: '5',
-            label: 'Double Bed',
-            children: <p>{data?.double_bed_price}</p>,
+            label: 'Package Cost',
+            children: <p>{data?.package_cost}</p>,
         },
         {
             key: '6',

@@ -122,6 +122,18 @@
     transform: translateX(3px);
 }
 
+.package-btn > Button {
+    background-color: var(--them-prim);
+    padding: 20px 30px !important;
+    border-radius: 12px;
+    color: #eee;
+    font-weight: 600;
+}
+.package-btn > Button:hover {
+    border: 1px double var(--them-prim) !important;
+    color: var(--them-prim) !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .course-card-img {

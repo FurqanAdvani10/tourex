@@ -13,7 +13,7 @@ const Process = () => {
                         <div className="heading-with-sub text-center">
                             <h5 className='p-0 m-0'>our Working Process</h5>
                             <h2 className='p-0 m-0'>See how we work step by step</h2>
-                            <p>Are you tired of the typical tourist destinations and area better looking to step out of your comfort zone travel</p>
+                            <p className='p-0 m-0'>Are you tired of the typical tourist destinations and area better looking to step out of your comfort zone travel</p>
                         </div>
                     </div>
                 </div>

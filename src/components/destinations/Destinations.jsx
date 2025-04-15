@@ -38,36 +38,39 @@ const Destinations = () => {
               pagination={{ clickable: true }}
               autoplay={{ delay: 2000 }}
               breakpoints={{
-                300: { slidesPerView: 1 },
-                501: { slidesPerView: 2 },
-                724: { slidesPerView: 4 },
+                0: { slidesPerView: 1 },       // Mobile (up to 500px)
+                600: { slidesPerView: 1 },       // Mobile (up to 500px)
+                800: { slidesPerView: 1 },       // Mobile (up to 500px)
+                500: { slidesPerView: 2 },     // Small tablets
+                768: { slidesPerView: 3 },     // Tablets
+                1024: { slidesPerView: 4 },    // Desktop
               }}
               loop={true}
               className="mySwiper"
             >
-              {data.map(item => {
-                return (
-                  <SwiperSlide key={item.id}>
-                    <div className="sild-container" 
-                      onClick={() => navigate('/packages')}
+            {data.map(item => {
+              return (
+                <SwiperSlide key={item.id}>
+                  <div className="sild-container"
+                    onClick={() => navigate('/packages')}
+                  >
+                    <div className="item-box"
+                      style={{ backgroundImage: `url(${images[`../../assets/${item?.image}`]?.default})`, objectFit: "contain" }}
                     >
-                      <div className="item-box"
-                        style={{ backgroundImage: `url(${images[`../../assets/${item?.image}`]?.default})`, objectFit: "contain" }}
-                      >
-                        <div className="item-content">
-                          <h3>{item.title}</h3>
-                          <h5>{item.subTitle}</h5>
-                        </div>
+                      <div className="item-content">
+                        <h3>{item.title}</h3>
+                        <h5>{item.subTitle}</h5>
                       </div>
                     </div>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </div>
+    </div >
   );
 };
 
