@@ -5,11 +5,14 @@ import { IoIosMailOpen } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosSend } from "react-icons/io";
 import { CiCircleCheck } from "react-icons/ci";
+import { useNavigate } from 'react-router-dom';
 // import footerLogo from '../../Assets/logo.jpg'
 
 
 
 const Footer = () => {
+
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -62,11 +65,11 @@ const Footer = () => {
                     <div class="col ">
                         <h1>Links</h1>
                         <ul>
-                            <li>About Us</li>
-                            <li>Our Mission</li>
-                            <li>Meet the Team</li>
-                            <li>Our Project</li>
-                            <li>Contact</li>
+                            <li onClick={() => navigate('/aboout')}>Home</li>
+                            <li onClick={() => navigate('/team')}>Our Team</li>
+                            <li onClick={() => navigate('/Packages')}>Packages</li>
+                            <li onClick={() => navigate('/faqs')}>FAQ's</li>
+                            <li onClick={() => navigate('/contact')}>Contact</li>
                         </ul>
                     </div>
                     <div class="col ">
@@ -74,7 +77,7 @@ const Footer = () => {
                         <ul>
                             <li>What We Offer</li>
                             <li>Our Story</li>
-                            <li>Latest News</li>
+                            <li onClick={() => navigate('')}>Latest News</li>
                             <li>Help Center</li>
                         </ul>
                     </div>

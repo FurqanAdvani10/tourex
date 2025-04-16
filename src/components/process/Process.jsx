@@ -1,8 +1,11 @@
 import React from 'react'
 import './process.css'
-import thumb from '../../assets/thumb-1.jpg'
-import thumb2 from '../../assets/thumb-2.jpg'
-import thumb3 from '../../assets/thumb-3.jpg'
+import thumb from '../../assets/packages/logo.jpg'
+// import thumb from '../../assets/thumb-1.jpg'
+import thumb2 from '../../assets/packages/logo.jpg'
+// import thumb2 from '../../assets/thumb-2.jpg'
+// import thumb3 from '../../assets/thumb-3.jpg'
+import thumb3 from '../../assets/packages/logo.jpg'
 
 const Process = () => {
     return (
@@ -17,7 +20,7 @@ const Process = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row mt-20 g-4 d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-3">
+                <div className="row mt-20 g-4 d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                     <div className="col">
                         <div className="process-container">
                             <div className="process-img-box">

@@ -54,12 +54,24 @@
   }
 
   @media (max-width: 768px) {
+    .explore-img-container{
+        margin-bottom: 20px;
+    }
+    .thumb-1 , .thumb-3 , .thumb-4{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
     .thumb-1 img , .thumb-3  img, .thumb-4 img{
         width: 100%;
         object-fit: contain;
         border-radius: 20px;
         display: flex;
-        gap: 10px !important;
+        gap: 20px !important;
+    }
+    .thumb-4 img{
+        /* margin-left: 10px; */
+        width: 150px;
     }
     .circle img{
     width: 100px;

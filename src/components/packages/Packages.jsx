@@ -58,7 +58,7 @@ const Packages = ({ forHero }) => {
 
                                             </div>
                                             <div className='card-price'>
-                                                <h4 className='p-0 m-0'>{program?.Group_tour}</h4>
+                                                <h4 className='p-0 m-0'>{program?.Group_tour || program?.package_cost}</h4>
                                             </div>
                                             <div class="course-footer">
                                                 <div class="course-btn">

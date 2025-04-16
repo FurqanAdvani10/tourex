@@ -1,9 +1,10 @@
 .process-container{
-    min-width: 100%;
+    width: 100%;
+    height: 100%;
 }
 .process-img-box > img {
     width: 100% !important;
-    height: 100% !important;
+    height: 260px;
     border-radius: 20px;
     object-fit: cover;
     max-width: 100%;
@@ -11,12 +12,15 @@
 .process-box{
     box-shadow: 1px 1px 11px 1px rgba(0,0,0,0.15);
     /* background-color: #f6f4fa; */
-    padding: 51px 44px 30px 44px;
+    height: 260px;
+    padding:  20px 30px;
     border-radius: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    /* gap: 15px; */
 }
 .process-box > .process-heading > h4{
     font-size: 18px;
@@ -28,4 +32,24 @@
 .process-icon > svg {
     /* background-color: var(--them-prim)  ; */
     color: var(--them-prim);
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .process-img-box > img{
+        height: 230px;
+    }
+    .process-box{
+        height: 230px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .process-img-box > img{
+        height: 220px;
+    }
+    .process-box{
+        height: 220px;
+    }
 }

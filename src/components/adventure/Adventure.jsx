@@ -1,7 +1,11 @@
 import React from 'react'
 import './adventure.css'
+import { useNavigate } from 'react-router-dom'
 
 const Adventure = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className='adventure-main'>
             <div className="container">
@@ -10,7 +14,7 @@ const Adventure = () => {
                         <div className="adventure-heading text-center">
                             <h5 className='p-0 m-0 bg-none'>Next Adventure Destination</h5>
                             <h2 className='p-0 m-0'>Popular Travel Destinations Available Worldwide</h2>
-                            <button>BOOK YOUR TRIP NOW</button>
+                            <button onClick={navigate('/packages')}>BOOK YOUR TRIP NOW</button>
                         </div>
                     </div>
                 </div>
