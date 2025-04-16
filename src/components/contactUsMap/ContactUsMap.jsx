@@ -37,8 +37,9 @@ const ContactUsMap = () => {
 
         const result = await response.text();
         console.log(result , "result")
-        // result === "" ? action.resetForm() : 'error'
+        // result === "S" ? action.resetForm() : 'error'
         // window.location.href = mailtoLink;
+        action.resetForm()
 
     };
 
