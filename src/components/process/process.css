@@ -29,6 +29,9 @@
 .process-box > .process-heading > p{
     font-size: 16px;
 }
+.process-icon {
+    margin-bottom: 15px;
+}
 .process-icon > svg {
     /* background-color: var(--them-prim)  ; */
     color: var(--them-prim);

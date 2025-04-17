@@ -4,7 +4,7 @@ import './header.css';
 import { useNavigate } from 'react-router-dom';
 // import { useNavigate }  from 'react-router-dom';
 // import logo from '../../Assets/logo.png';
-import logo from '../../assets/logo2.png'
+import logo from '../../assets/logo.png'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);

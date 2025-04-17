@@ -5,15 +5,17 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { data } from './destinationsData';
+import { useNavigate } from 'react-router-dom';
 // import one from '../../assets/one.jpg'
 
 const Destinations = () => {
+  const navigate = useNavigate(); // Add this inside the component
 
 
   const images = import.meta.glob('../../assets/*', { eager: true });
 
   return (
-    <div className='destination-main section-padding'>
+    <div id='explore' className='destination-main section-padding' >
       <div className="container">
         <div className="row">
           <div className="col-md-12">
@@ -52,11 +54,11 @@ const Destinations = () => {
               return (
                 <SwiperSlide key={item.id}>
                   <div className="sild-container"
-                    onClick={() => navigate('/packages')}
                   >
                     <div className="item-box"
                       style={{ backgroundImage: `url(${images[`../../assets/${item?.image}`]?.default})`, objectFit: "contain" }}
-                    >
+                      onClick={() => navigate('/packages')}
+                   >
                       <div className="item-content">
                         <h3>{item.title}</h3>
                         <h5>{item.subTitle}</h5>

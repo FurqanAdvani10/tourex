@@ -8,7 +8,7 @@ const Home = () => {
       <Destinations />
       <Process />
       <Packages forHero={true} />
-      <Banner />
+      {/* <Banner /> */}
       <Testimonials />
     </>
   )

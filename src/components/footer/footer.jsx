@@ -25,7 +25,7 @@ const Footer = () => {
                             {/* <div className='footer-logo'>
                             <img src={footerLogo} alt='' />    
                         </div>  */}
-                            <li>Lorem ipsum dolor sit amet, consect etur adi pisicing elit sed do eiusmod.</li>
+                            <li>Discover timeless journeys and unforgettable moments with Travel & Memoirs.</li>
                             <hr className='hr-line' />
                             <li>
                                 <div className='foter-icon-content'>
@@ -33,7 +33,7 @@ const Footer = () => {
                                         <FaPhone />
                                     </div>
                                     <div className='content'>
-                                        +9221 34857005
+                                        +92 332 9773747
                                     </div>
                                 </div>
                             </li>
@@ -44,7 +44,7 @@ const Footer = () => {
 
                                     </div>
                                     <div className='content'>
-                                        info@rfqtravel.com
+                                        info@travelnmemories.com
                                     </div>
                                 </div>
 
@@ -56,7 +56,7 @@ const Footer = () => {
 
                                     </div>
                                     <div className='content'>
-                                    office #103 iconic teades center near KBC Resturant Bahudrabad, karachi
+                                    Central Plaza Opp Gul Plaza Marston Road Saddar karachi
                                     </div>
                                 </div>
                             </li>

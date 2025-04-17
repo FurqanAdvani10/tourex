@@ -3,6 +3,8 @@ import './App.css'
 import { CLoader, Footer, Header} from './components'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { AboutUs, ContactPage, Details, FAQ, Home,  PackagePage,  TeamPage } from './pages'
+import SubFooter from './components/sub-footer/sub'
+// import CookieConsent from './Utils/CookieConsent'
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
         ) : (
           <>
             <Header />
-            <div style={{ height: '80px', padding: '0px' }}></div>
+            <div style={{ height: '85px', padding: '0px' }}></div>
 
             <Suspense fallback={<CLoader />}>
               <Routes>
@@ -43,7 +45,8 @@ function App() {
               </Routes>
             </Suspense>
 
-            {/* <SubFooter /> */}
+            {/* <CookieConsent /> */}
+            <SubFooter />
             <Footer />
           </>
 

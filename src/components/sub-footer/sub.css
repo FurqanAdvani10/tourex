@@ -4,8 +4,8 @@
     display: flex;
 }
 .sub-logo img{
-    width: 100px;
-    /* height: 180px; */
+    width: 140px;
+    /* height: 200px; */
 }
 .sub-content{
     display: flex;
@@ -28,14 +28,15 @@
     cursor: pointer;
 }
 .sub-icons > i > svg:hover {
-    color: var(--them-color) ;
+    color: var(--them-prim) !important;
     transition: all 0.4s;
 }
 .sub-link > h4 > span{
-    border-bottom:  1px solid var(--them-color);
+    border-bottom:  1px solid white;
+    cursor: pointer;
 }
 .sub-link > h4 > span:hover{
-    color: var(--them-color);
+    color: var(--them-prim);
     transition: all 0.4s;
 }
 
