@@ -33,6 +33,11 @@ const Information = ({ data }) => {
             label: 'Food Included',
             children: <p>{data?.food_included}</p>,
         },
+        {
+            key: '2',
+            label: 'Transport By',
+            children: <p>{data?.car}</p>,
+        },
         ...(data?.jeep?.length ? [{
             key: '3',
             label: 'Jeep',
