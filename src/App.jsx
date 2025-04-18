@@ -42,6 +42,7 @@ function App() {
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/packages" element={<PackagePage />} />
                 <Route path='/details/:id' element={<Details />} />
+                <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>
 
