@@ -5,11 +5,7 @@ const AboutUs = () => {
   return (
     <div>
        <PageWrapper
-        title={"About-Us "}
-        moveTo={"Home"}
         className={'about-banner'}
-        navigatePath={'/'}
-        subtitle={"About"}
       />
       <Explore />
       <WhatWeDo />

@@ -11,32 +11,8 @@
     position: relative;
 }
 
-.about-banner {
-    background: black !important;
-    width: 100%;
-    height: 420px;
-}
-
-.about-banner h4 {
-    color: var(--them-prim) !important;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* font-size: 9px !important; */
-}
-
-.contact-banner {
-    background: black !important;
-    width: 100%;
-    height: 420px;
-
-    h4 {
-        color: var(--them-prim) !important;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        /* font-size: 9px !important; */
-    }
-}
-
 .packages-banner {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)), url(../../assets/banner3.jpg) !important;
+    background-image: url(../../assets/Pakckages.jpeg) !important;
     width: 100%;
     height: 420px;
 }
@@ -47,8 +23,28 @@
     height: 420px;
 }
 
+.about-banner {
+    background-image: url(../../assets/Aboutus.jpeg) !important;
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-banner {
+    background-image: url(../../assets/Contactus.jpeg) !important;
+    width: 100%;
+    height: 420px;
+}
+
+.details-banner {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)), url(../../assets/banner4.jpg) !important;
+    width: 100%;
+    height: 420px;
+}
+
 .team-banner {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)), url(../../assets/bannersection.jpg) !important;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)), url(../../assets/banner2.jpg) !important;
     width: 100%;
     height: 420px;
 }
@@ -82,19 +78,6 @@
     color: var(--btn-bg);
 }
 
-.feature {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.471), rgba(159, 138, 103, 0.564)), url(../../Assets/featurebackground.jpg) !important;
-    background-position: 0px -2px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.servicebg {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.745), rgba(250, 201, 109, 0.397)), url(../../Assets/servicebg.jpg) !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 @media (max-width: 768px) {
     .wrapper-heading>h6 {
         font-weight: 400;
@@ -111,10 +94,7 @@
 
     .wrapper-main {
         width: 100%;
-        height: 300px;
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), rgba(109, 107, 107, 0.508)), url(../../assets/contactbg.jpg);
-        /* background-position: center; */
-        /* background-size: cover; */
+        height: 250px;
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;

@@ -109,8 +109,9 @@ function Details() {
             {/* Page Wrapper Component */}
             <PageWrapper
                 title={Item.name}
-                moveTo="packages"
+                moveTo="Packages"
                 subtitle="Details"
+                className={'details-banner'}
                 navigatePath={"/packages"}
             />
             <div className="container-fluid">

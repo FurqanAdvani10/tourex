@@ -10,6 +10,7 @@ const TeamPage = () => {
       <PageWrapper
         title={"Our Team"}
         moveTo={"Home"}
+        className={'team-banner'}
         navigatePath={'/'}
         subtitle={"Team"}
       />

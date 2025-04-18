@@ -5,10 +5,6 @@ const PackagePage = () => {
   return (
     <>
        <PageWrapper
-        title={"Packages"}
-        moveTo={"Home"}
-        navigatePath={'/'}
-        subtitle={"Packages"}
         className={'packages-banner'}
       />
       <Packages />

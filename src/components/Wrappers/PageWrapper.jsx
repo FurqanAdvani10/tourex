@@ -13,7 +13,7 @@ const PageWrapper = ({title, subtitle, navigatePath, moveTo, className }) => {
                         <div className="wrapper-heading">
                             <h4 className="p-0 m-0">{title || ''}</h4>
                             <h6 className="p-0 m-0">
-                                <span onClick={() => navigate(navigatePath)}>{moveTo}</span> / {subtitle}
+                                <span onClick={() => navigate(navigatePath)}>{moveTo}</span> {navigatePath ? `/`  : ''} {subtitle}
                             </h6>
                         </div>
                     </div>
