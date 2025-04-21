@@ -1,149 +1,101 @@
-import React from 'react'
-import './footer.css'
-import { FaPhone } from "react-icons/fa6";
-import { IoIosMailOpen } from "react-icons/io";
-import { FaLocationDot } from "react-icons/fa6";
-import { IoIosSend } from "react-icons/io";
-import { CiCircleCheck } from "react-icons/ci";
-import { useNavigate } from 'react-router-dom';
-// import footerLogo from '../../Assets/logo.jpg'
+import React from 'react';
+import { Layout, Row, Col, Typography } from 'antd';
+import Logo from '../../Assets/logowhite.png';
+import "./footer.css";
+import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from '@ant-design/icons';
+import { Container } from 'react-bootstrap';
 
-
+const { Title, Text } = Typography; 
 
 const Footer = () => {
-
-    const navigate = useNavigate();
-
     return (
-        <div>
-            {/* <!-- FOOTER START --> */}
-            <div class="footer section-top">
-                <div class="contain">
-                    <div class="col col-md-4 col-hr">  
+        <>
+            <Layout.Footer className="footer" style={{ backgroundColor: '#f8f8f8', color: '#626262', padding: '40px 0 0 0' }}>
+                <Container>
+                    <Row gutter={[16, 16]} style={{ paddingBottom: "30px" }}>
 
-                        <ul>
-                            {/* <div className='footer-logo'>
-                            <img src={footerLogo} alt='' />    
-                        </div>  */}
-                            <li>Discover timeless journeys and unforgettable moments with Travel & Memoirs.</li>
-                            <hr className='hr-line' />
-                            <li>
-                                <div className='foter-icon-content'>
-                                    <div className='footer-icon'>
-                                        <FaPhone />
-                                    </div>
-                                    <div className='content'>
-                                        +92 332 9773747
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div className='foter-icon-content'>
-                                    <div className='footer-icon'>
-                                        <IoIosMailOpen />
+                        {/* Left Column (CAVE EXPERTISE) */}
+                        <Col xs={24} sm={12} md={12} lg={8}>
+                            <Title level={4} style={{ color: '#000' }}>OUR EXPERTISE & SERVICES</Title>
+                            <Text style={{ display: 'block', color: '#626262' }}>Cave Mapping & Exploration</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Speleological Research</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Ecological Preservation</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Tourism Development</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Risk Assessment & Safety Protocols</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Geological Surveying</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Speleological Research</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Educational Workshops</Text>
+                        </Col>
 
-                                    </div>
-                                    <div className='content'>
-                                        info@travelnmemories.com
-                                    </div>
-                                </div>
+                        {/* Center Column (Map) */}
+                        <Col xs={24} sm={12} md={12} lg={10}>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40803.235262064105!2d-0.26674749999999997!3d51.5287393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1698793256143!5m2!1sen!2s" width="85%"
+                                height="40"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            />
+                        </Col>
 
-                            </li>
-                            <li>
-                                <div className='foter-icon-content'>
-                                    <div className='footer-icon'>
-                                        <FaLocationDot />
+                        <Col xs={24} sm={12} md={7} lg={6}>
+                            <Title level={4} style={{ color: '#000' }}>Contact Us</Title>
+                            <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Head Office</Title>
+                            <Text style={{ display: 'block', color: '#626262' }}>Wood street Walthamstow, east London.</Text>
+                            <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Phone Number</Title>
+                            <Text style={{ display: 'block', color: '#626262' }}>
+                                <a style={{ display: 'block', color: '#626262' }} href="tel:+07777966289">T: 07777 966 289</a>
+                            </Text>
+                            <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Email Address</Title>
+                            <Text style={{ display: 'block', color: '#626262' }}>
+                                <a style={{ display: 'block', color: '#626262' }} className='link-footer' href="mailto:cavecounselling@outlook.com">
+                                    cavecounselling@outlook.com
+                                </a>
+                            </Text>
 
-                                    </div>
-                                    <div className='content'>
-                                    Central Plaza Opp Gul Plaza Marston Road Saddar karachi
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col ">
-                        <h1>Links</h1>
-                        <ul>
-                            <li onClick={() => navigate('/aboout')}>Home</li>
-                            <li onClick={() => navigate('/team')}>Our Team</li>
-                            <li onClick={() => navigate('/Packages')}>Packages</li>
-                            <li onClick={() => navigate('/faqs')}>FAQ's</li>
-                            <li onClick={() => navigate('/contact')}>Contact</li>
-                        </ul>
-                    </div>
-                    <div class="col ">
-                        <h1>Explore</h1>
-                        <ul>
-                            <li>What We Offer</li>
-                            <li>Our Story</li>
-                            <li onClick={() => navigate('')}>Latest News</li>
-                            <li>Help Center</li>
-                        </ul>
-                    </div>
+                            {/* Uncomment and update Instagram link if needed */}
+                            {/* 
+    <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Instagram</Title>
+    <Text style={{ display: 'block', color: '#626262' }}><a href="">cavecounselling</a></Text>
+    */}
+                        </Col>
+                    </Row>
 
-                    <div class="col  col-social social">
-                        <div className='news-letter'>
-                            <h1>
-                                NEWSLETTER
-                            </h1>
-                            <div className='news-box'>
-                                <div className='news-input'>
-                                    <input placeholder='Enter your email' />
-
-                                </div>
-                                <div className='news-btn'>
-                                    <button>
-                                        <i>
-                                            <IoIosSend />
-                                        </i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className='agree'>
-                                <div className='agree-icon'>
-                                    <i>
-                                        <CiCircleCheck />
-                                    </i>
-                                </div>
-                                <div className='agree-content'>
-                                    <h4>
-                                        I agree to all your terms and policies
-                                    </h4>
-
-                                </div>
-                            </div>
-
+                    <hr style={{ margin: "0" }} />
+                    <div className="footer-container">
+                        <div className="footer-links">
+                            <a href="#">Home</a>
+                            <a href="#">About Us</a>
+                            <a href="#">Our Services</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">Contact</a>
+                        </div>
+                        <div className="footer-icons">
+                            <a href="#" className="icon facebook"><FacebookOutlined /></a>
+                            <a href="#" className="icon instagram"><InstagramOutlined /></a>
+                            <a href="#" className="icon linkedin"><LinkedinOutlined /></a>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div className='footer-emd'>
+                </Container>
+            </Layout.Footer>
 
-                        <hr className='footer-line' />
-                        <div className='container'>
-                            <div className='end-content'>
-
-                                <div className='right-side'>
-                                    <h4>
-                                        © Copyrights, 2005 Travel N Memories
-                                    </h4>
-                                </div>
-                                <div className='left-side'>
-                                    <h4>
-                                        Terms & Conditions                                     </h4>
-                                        •
-                                    <h4>
-                                        Privacy Policy
-                                    </h4>
-                                </div>
-                            </div>
-
+            <div className="footer-content" style={{ background: "black", }}>
+                <Container >
+                    <div className="sub-footer-content">
+                        <div className="footer-text">
+                            <Text style={{ color: '#ffff' }}>
+                                © {new Date().getFullYear()} Travel N Memories. All Rights Reserved.
+                            </Text>
+                        </div>
+                        <div className="footer-logo">
+                            <img src={Logo} alt="Cave Consulting Logo" />
                         </div>
                     </div>
-                </div>
+                </Container>
             </div>
-        </div>
-    )
+        </>
+    );
 }
 
-export default Footer
+export default Footer;

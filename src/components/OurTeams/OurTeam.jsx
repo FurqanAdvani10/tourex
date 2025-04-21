@@ -25,20 +25,24 @@ const OurTeam = () => {
                         </div>
                     </div>
                 </div>
-                <div className="our-team-card-container mt-20 d-flex justify-content-center align-items-center" >
-                    <div className="row g-4 d-flex align-items-center justify-content-center row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4">
+                <div className="our-team-card-container">
+                    <div className="row g-4 justify-content-center align-items-center">
                         {data.map((team, index) => (
-                            <div className="col" key={index}>
-                                <div className="team-item ">
+                            <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={index}>
+                                <div className="team-item">
                                     <div className="team-inner">
                                         <div className="team-thumb">
-                                             <img src={getImg(team?.src)} alt={team.name} />
+                                            <img
+                                                src={getImg(team?.src)}
+                                                alt={team.name}
+                                                loading="lazy"
+                                            />
                                         </div>
                                         <div className="team-content">
-                                            <a href={team.profileLink}>
-                                                <h4 className="p-0 m-0">{team.name}</h4>
+                                            <a href={team.profileLink} target="_blank" rel="noopener noreferrer">
+                                                <h4>{team.name}</h4>
                                             </a>
-                                            <p className="p-0 m-0">{team.designation}</p>
+                                            <p>{team.designation}</p>
                                         </div>
                                     </div>
                                 </div>

@@ -6,7 +6,7 @@ const CLoader = () => {
   return (
     <div className="loading-spinner">
       <div className="loader-main-container text-center">
-        <HashLoader color="#bb9166" size={60} />
+        <HashLoader color="#bb9166" size={40} />
         <p className="loader-text ">Travel N Memories</p>
       </div>
     </div>

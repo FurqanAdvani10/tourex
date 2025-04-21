@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './header.css';
-import { useNavigate } from 'react-router-dom';
-// import { useNavigate }  from 'react-router-dom';
-// import logo from '../../Assets/logo.png';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
-const navigate = useNavigate()
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,48 +18,64 @@ const navigate = useNavigate()
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleMenuClick = () => {
-    setMenuOpen(!menuOpen);
+  useEffect(() => {
+    setAnimate(true); // trigger animation on mount
+  }, []);
+
+  const navItems = [
+    { label: 'Home', path: '/' },
+    { label: 'Packages', path: '/packages' },
+    { label: 'Team', path: '/team' },
+    { label: 'FAQ', path: '/faqs' },
+    { label: 'About', path: '/about-us' },
+    { label: 'Contact', path: '/contact' },
+  ];
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    setMenuOpen(false); // close menu on navigation
   };
 
   return (
-    <nav className={`navbar navbar-expand-lg fixed-top ${scrolled ? 'scrolled' : ''}`}>
+    <nav
+      className={`navbar navbar-expand-lg fixed-top 
+        ${scrolled ? 'scrolled' : ''} 
+        ${animate ? 'animate-navbar' : ''}`}
+    >
       <div className="container">
-        <div className="navbar-logo" onClick={() => navigate('/')}>
+        <div className="navbar-logo" onClick={() => handleNavigation('/')}>
           <img src={logo} alt="Logo" />
         </div>
-        <button className="navbar-toggler" type="button" onClick={handleMenuClick} aria-controls="navbarNav" aria-expanded={menuOpen ? 'true' : 'false'} aria-label="Toggle navigation">
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
           <FaBars />
         </button>
-        <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`} id="navbarNav">
+
+        <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}>
           <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <a className="nav-link"  onClick={() => navigate('/')}>Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" onClick={() => navigate('/packages')}>Packages</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" onClick={() => navigate('/team')}>Team</a>
-            </li>
-           
-            <li className="nav-item">
-              <a className="nav-link"  onClick={() => navigate('/faqs')}>FAQ</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link"  onClick={() => navigate('/about-us')}>About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link"  onClick={() => navigate('/contact')}>Contact</a>
-            </li>
+            {navItems.map((item, index) => (
+              <li className="nav-item" key={index}>
+                <a
+                  className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+                  onClick={() => handleNavigation(item.path)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
           <div className="navbar-icons">
-            <button className="btn btn-outline-primary" onClick={() => navigate('/contact')}>Register</button>
+            <button className="btn btn-outline-primary" onClick={() => handleNavigation('/contact')}>
+              Register
+            </button>
           </div>
         </div>
       </div>
