@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout, Row, Col, Typography } from 'antd';
-import Logo from '../../Assets/logowhite.png';
+import Logo from '../../assets/logowhite.png';
 import "./footer.css";
 import { FacebookOutlined, InstagramOutlined, LinkedinOutlined } from '@ant-design/icons';
 import { Container } from 'react-bootstrap';
