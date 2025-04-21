@@ -4,7 +4,6 @@ import { secure, travel, hassle_free, customer_support, mountain } from '../../a
 
 const Process = () => {
 
-
     const steps = [
         {
             icon: travel,

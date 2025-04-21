@@ -19,8 +19,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 39px;
-  padding-bottom: 39px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .footer-links {
@@ -33,7 +33,7 @@
   color: black;
   letter-spacing: 1px;
   padding: 0 16px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
 
@@ -48,7 +48,7 @@
   text-decoration: none;
   color: #000;
   padding: 0 16px;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 @media (max-width: 650px) {

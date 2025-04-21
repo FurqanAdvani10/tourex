@@ -29,9 +29,8 @@ function Header() {
     { label: 'Home', path: '/' },
     { label: 'Packages', path: '/packages' },
     { label: 'Team', path: '/team' },
-    { label: 'FAQ', path: '/faqs' },
-    { label: 'About', path: '/about-us' },
-    { label: 'Contact', path: '/contact' },
+    { label: 'About Us', path: '/about-us' },
+    { label: 'Contact Us', path: '/contact' },
   ];
 
   const handleNavigation = (path) => {

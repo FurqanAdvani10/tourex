@@ -31,8 +31,11 @@ const Footer = () => {
                         <Col xs={24} sm={12} md={12} lg={10}>
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d40803.235262064105!2d-0.26674749999999997!3d51.5287393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2s!4v1698793256143!5m2!1sen!2s" width="85%"
-                                height="40"
-                                style={{ border: 0 }}
+                                style={{
+                                    border: "0",
+                                    width: "100%", // Make the width responsive
+                                    height: "300px", // Fixed height
+                                }}
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
@@ -42,15 +45,15 @@ const Footer = () => {
                         <Col xs={24} sm={12} md={7} lg={6}>
                             <Title level={4} style={{ color: '#000' }}>Contact Us</Title>
                             <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Head Office</Title>
-                            <Text style={{ display: 'block', color: '#626262' }}>Wood street Walthamstow, east London.</Text>
+                            <Text style={{ display: 'block', color: '#626262' }}>Central Plaza Opp Gul Plaza Marston Road Saddar karachi</Text>
                             <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Phone Number</Title>
                             <Text style={{ display: 'block', color: '#626262' }}>
-                                <a style={{ display: 'block', color: '#626262' }} href="tel:+07777966289">T: 07777 966 289</a>
+                                <a style={{ display: 'block', color: '#626262' }} href="tel:+07777966289">T: +92 332 9773747</a>
                             </Text>
                             <Title level={5} style={{ color: '#000', marginBlock: "5px" }}>Email Address</Title>
                             <Text style={{ display: 'block', color: '#626262' }}>
-                                <a style={{ display: 'block', color: '#626262' }} className='link-footer' href="mailto:cavecounselling@outlook.com">
-                                    cavecounselling@outlook.com
+                                <a style={{ display: 'block', color: '#626262' }} className='link-footer' href="mailto:info@travelnmemories.com">
+                                    info@travelnmemories.com
                                 </a>
                             </Text>
 
@@ -67,8 +70,8 @@ const Footer = () => {
                         <div className="footer-links">
                             <a href="#">Home</a>
                             <a href="#">About Us</a>
-                            <a href="#">Our Services</a>
-                            <a href="#">FAQ</a>
+                            <a href="#">Packages</a>
+                            <a href="#">Team</a>
                             <a href="#">Contact</a>
                         </div>
                         <div className="footer-icons">

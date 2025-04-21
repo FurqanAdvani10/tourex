@@ -54,13 +54,6 @@ const FAQ = () => {
 
   return (
     <>
-      <PageWrapper
-        title={"Frequently Asked Question"}
-        moveTo={"Home"}
-        navigatePath={'/'}
-        subtitle={"Faq's"}
-        className={'faqs-banner'}
-      />
       <div className="section-padding">
         <div className="container">
           <div className="row">
