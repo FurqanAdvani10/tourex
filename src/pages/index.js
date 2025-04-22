@@ -5,6 +5,7 @@ import AboutUs from "./about/AboutUs";
 import TeamPage from "./team/Team";
 import PackagePage from "./packages/Package";
 import Details from "./Details/Details";
+import BlogsPage from "./blogs";
 
 export {
     Home,
@@ -14,4 +15,5 @@ export {
     TeamPage,
     PackagePage,
     Details,
+    BlogsPage
 }

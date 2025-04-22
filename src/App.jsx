@@ -2,8 +2,9 @@ import { Suspense, useEffect, useState } from 'react'
 import './App.css'
 import { CLoader, Footer, Header} from './components'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { AboutUs, ContactPage, Details, FAQ, Home,  PackagePage,  TeamPage } from './pages'
+import { AboutUs, BlogsPage, ContactPage, Details, FAQ, Home,  PackagePage,  TeamPage } from './pages'
 import SubFooter from './components/sub-footer/sub'
+import BlogDetails from './pages/blogs/blogDetails'
 // import CookieConsent from './Utils/CookieConsent'
 
 function App() {
@@ -42,6 +43,8 @@ function App() {
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/packages" element={<PackagePage />} />
                 <Route path='/details/:id' element={<Details />} />
+                <Route path='/blogs' element={<BlogsPage />} />
+                <Route path="/blog/:slug" element={<BlogDetails />} />
                 <Route path="*" element={<Home />} />
               </Routes>
             </Suspense>

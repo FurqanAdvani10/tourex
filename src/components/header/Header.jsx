@@ -29,6 +29,7 @@ function Header() {
     { label: 'Home', path: '/' },
     { label: 'Packages', path: '/packages' },
     { label: 'Team', path: '/team' },
+    { label: 'Blogs', path: '/blogs' },
     { label: 'About Us', path: '/about-us' },
     { label: 'Contact Us', path: '/contact' },
   ];
